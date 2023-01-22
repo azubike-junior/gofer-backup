@@ -33,7 +33,7 @@ export function InputField({
   return (
     <div className={className}>
       {label && (
-        <label htmlFor="" className="text-sm uppercase text-[#101010]">
+        <label htmlFor="" className="text-base capitalize text-[#243763]">
           {label}
         </label>
       )}
@@ -46,9 +46,9 @@ export function InputField({
         )}
       >
         <input
-          {...register(name, { required })}
+          // {...register(name, { required })}
           placeholder={placeholder}
-          className="rounded-lg outline-none flex-1 px-3 py-1"
+          className="rounded-lg outline-none flex-1 px-3 py-2"
           name={name}
           type={type}
           disabled={disabled}

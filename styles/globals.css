@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+@import url('https://fonts.cdnfonts.com/css/recoleta');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.pic_position {
-  bottom: 420px;
+
+.hero-banner {
+  /* background-image: url('/hero.svg'); */
+  background-position: center;
+  background: linear-gradient(rgba(36, 55, 99, 0.8), rgba(36, 55, 99, 0.8)),url('/hero.svg');
+  background-size:contain;
+  
 }
-
-.modal {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-
