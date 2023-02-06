@@ -53,6 +53,7 @@ module.exports = {
       },
       backgroundColor: {
         lightPink: "rgba(255, 2, 2, 0.13)",
+        profileHeroBg:"linear-gradient(90deg, #3D7EAA 0%, #FFE47A 100%)"
       },
       inset: {
         "135px": "-135px",

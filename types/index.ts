@@ -1,5 +1,5 @@
 export type loginProps = {
-    email: string,
+    phone_number: string,
     password: string
 }
 
@@ -74,9 +74,17 @@ export interface IHookInputProps {
   inputClass?: string
 }
 
-export interface ILogin {
-  username: string
+export interface ICreateAccount {
+  first_name: string
+  last_name: string
+  client?: string
+  phone_number: string
   password: string
-  router?: any
+}
+
+export interface ILogin {
+  phone_number: string
+  password: string,
+  router: any
 }
 

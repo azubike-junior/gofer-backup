@@ -1,13 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from 'next/head'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { Toaster } from 'react-hot-toast'
+import { useDispatch, useSelector } from 'react-redux'
 import Button from '../components/Button'
 import { InputField } from '../components/InputField'
+import Loader from '../components/Loader'
+import { loginUser } from '../services/auth/login'
+import { RootState } from '../services/store'
 import { ILogin } from '../types'
 
 export default function Login() {
   const [visible, setVisible] = useState<boolean>(false)
+  const { loading } = useSelector((state: RootState) => state.login)
+  const dispatch = useDispatch()
+  const router = useRouter()
 
   const {
     register,
@@ -15,6 +25,12 @@ export default function Login() {
     watch,
     formState: { errors },
   } = useForm<ILogin>()
+
+  const loginHandler = (data: ILogin) => {
+    const phone_number = `+234${data?.phone_number.substring(1)}`
+    const password = data.password
+    dispatch(loginUser({ router, phone_number, password }))
+  }
 
   return (
     <>
@@ -25,6 +41,8 @@ export default function Login() {
       </Head>
 
       <div className="h-screen bg-white flex">
+        <Toaster />
+
         <div className=" w-3/5 h-full hero-banner font-recoletta flex  justify-center items-center font-bold">
           <p className="text-7xl text-white tracking-wider">
             Run Errands, Get Paid
@@ -37,23 +55,48 @@ export default function Login() {
             <h1 className="font-inter text-2xl font-bold text-black tracking-wide">
               Welcome Back, Login
             </h1>
+
             <p className="pt-2 text-base">
               Enter your Gofer credentials and Login
             </p>
-
-            <div className="pt-10 space-y-8">
-              <InputField label="Phone Number" placeholder="Enter First Name" />
-              <InputField label="Password" placeholder="Enter First Name" />
-
+            <form
+              className="pt-10 space-y-8"
+              onSubmit={handleSubmit(loginHandler)}
+            >
+              <InputField
+                label="Phone Number"
+                placeholder="Enter Phone Number"
+                required
+                type="text"
+                name="phone_number"
+                register={register}
+                errors={errors.phone_number}
+                message="Phone Number field is required"
+              />
+              <InputField
+                label="Password"
+                placeholder="Enter First password"
+                required
+                type="password"
+                name="password"
+                register={register}
+                errors={errors.password}
+                message="Password field is required"
+              />
               <Button
-                child="Login"
+                type="submit"
+                child={loading ? <Loader /> : 'Login'}
                 className="w-full bg-[#243763] text-white rounded-lg p-4 text-base"
               />
               <h5 className="text-center text-black">
-              Don’t Have an Account? {" "}
-                 <span className="font-bold text-[#243763]">Create Account</span>
+                Don’t Have an Account?{' '}
+                <Link href="/create-account">
+                  <span className="font-bold text-[#243763]">
+                    Create Account
+                  </span>
+                </Link>
               </h5>
-            </div>
+            </form>
           </div>
         </div>
       </div>

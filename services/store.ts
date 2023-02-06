@@ -1,13 +1,22 @@
-import { Action, AnyAction, configureStore, Dispatch, ThunkAction } from "@reduxjs/toolkit";
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
-import loginUser from "./users/login";
-import modalsReducer from "./modals"
+import createAccount from "./auth/create-account";
+import login from "./auth/login";
+import questions from "./auth/questions";
+import verifyPhone from "./auth/verify-phone";
+
+
+import modalsReducer from "./modals";
 
 export const store = configureStore({
   reducer: {
-    login: loginUser,
+    createAccount,
+    login,
+    questions,
+    verifyPhone,
     modals: modalsReducer
-  }
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 })
 
 setupListeners(store.dispatch);

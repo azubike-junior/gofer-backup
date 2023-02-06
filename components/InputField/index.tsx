@@ -2,8 +2,6 @@ import PhoneInput from 'react-phone-input-2'
 import { classNames } from '../../helpers/classNames'
 import { IHookInputProps } from '../../types'
 
-const handleChange = () => {}
-
 export function InputField({
   label,
   rest,
@@ -39,19 +37,20 @@ export function InputField({
       )}
 
       <div
-         className={classNames(
+        className={classNames(
           !errors && 'focus:border-green-600',
           errors && 'border-red-500',
           'flex justify-between items-center w-full bg-white py-2 border-2 border-inputBorder rounded-lg mt-1',
         )}
       >
         <input
-          // {...register(name, { required })}
+          {...register(name, { required })}
           placeholder={placeholder}
           className="rounded-lg outline-none flex-1 px-3 py-2"
           name={name}
           type={type}
           disabled={disabled}
+          value={value}
           {...rest}
         />
 
@@ -95,7 +94,6 @@ export const SelectField = ({
   selectBorder,
   selectLabel,
   labelClass,
-  
 }: IHookInputProps) => {
   return (
     <div className={className}>
@@ -104,9 +102,12 @@ export const SelectField = ({
           {label}
         </label>
       )}
-      <div >
+      <div>
         <select
-          className={classNames(selectBorder && selectBorder, "w-full p-3 rounded-lg outline-none bg-white border-inputBorder border-1 mt-1 text-tintedAsh") }
+          className={classNames(
+            selectBorder && selectBorder,
+            'w-full p-3 rounded-lg outline-none bg-white border-inputBorder border-1 mt-1 text-tintedAsh',
+          )}
           name=""
           id=""
         >
@@ -121,63 +122,6 @@ export const SelectField = ({
           })}
         </select>
       </div>
-    </div>
-  )
-}
-
-export function BigInputField({
-  label,
-  rest,
-  placeholder,
-  required,
-  className = '',
-  errors,
-  name,
-  show,
-  type,
-  disabled,
-  register,
-  value,
-  message,
-  onClick,
-  labelClass,
-  borderClass,
-  inputClass
-}: IHookInputProps) {
-  return (
-    <div className={className}>
-      {label && (
-        <label htmlFor="" className={labelClass}>
-          {label}
-        </label>
-      )}
-
-      <div
-        className={classNames(
-          !errors && 'focus:border-green-600',
-          errors && 'border-red-500',
-          borderClass && borderClass,
-          'flex justify-between items-center w-full bg-white border-1 border-inputBorder rounded-lg mt-1',
-        )}
-      >
-        <input
-          {...register(name, { required })}
-          placeholder={placeholder}
-          className={inputClass}
-          name={name}
-          type={type}
-          disabled={disabled}
-          {...rest}
-          value={value}
-        />
-
-        {show && (
-          <p onClick={onClick} className="cursor-pointer text-xs">
-            {show === 'show' ? 'show' : 'hide'}
-          </p>
-        )}
-      </div>
-      {errors && <span className="text-red-500 text-sm">{message}</span>}
     </div>
   )
 }
