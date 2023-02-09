@@ -232,7 +232,7 @@ export default function profile() {
 
           {showAdvanced && (
             <div className="mt-8">
-              <p>Coming Soon...................</p>
+              <p className="text-bold">Coming Soon................</p>
             </div>
           )}
         </div>
