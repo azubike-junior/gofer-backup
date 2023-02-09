@@ -56,8 +56,8 @@ export default function Register() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className=" bg-white flex ">
-        <div className=" w-3/5 h-screen hero-banner font-recoletta flex  justify-center items-center font-bold">
+      <div className="bg-white flex ">
+        <div className=" w-3/5 hero-banner font-recoletta flex  justify-center items-center font-bold">
           <p className="text-7xl text-white tracking-wider">
             Run Errands, Get Paid
           </p>
