@@ -5,6 +5,6 @@ node_modules/
 
 yarn-error.log
 npm-debug.log*
-yarn-lcok
+yarn-lock
 
 .next/analytics
