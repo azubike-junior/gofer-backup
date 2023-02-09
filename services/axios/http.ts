@@ -1,12 +1,8 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 axios.interceptors.request.use(async (config: AxiosRequestConfig) => {
-  if (config.url?.includes('/login')) return config;
-  if (config.url?.includes('/register')) return config;
-
-  console.log(">>>>>config", config)
-
-  // validateToken()
+  if (config.url?.includes('/sign-in')) return config;
+  if (config.url?.includes('/sign-up')) return config;
 
   config.headers!['Authorization'] = "Bearer " + localStorage.getItem("access_token")
   config.headers!['Content-Type'] = "application/json";
