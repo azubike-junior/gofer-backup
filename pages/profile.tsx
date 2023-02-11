@@ -23,13 +23,12 @@ export default function profile() {
       setShowVerification(false);
     }
   };
-  // console.log(toggleButtons);
   return (
     <div className="bg-white h-full font-inter">
       <div className="bg-[#243763] h-24"></div>
       <div className="banner h-[250px] z-5"></div>
-      <div className="flex z-20 w-full justify-center items-center px-40 pb-40">
-        <div className="">
+      <div className=" flex z-20 w-full justify-center items-center px-40 pb-40">
+        <div className=" w-full">
           <div className="flex">
             <div className="flex -mt-10 space-x-8 w-52 h-52 border-[6px] border-white rounded-full shadow-lg"></div>
             <div className="mt-8 flex justify-between">
@@ -100,141 +99,162 @@ export default function profile() {
             </div>
           </div>
 
-          <div className="flex w-full border-b-1 border-[#DEDEDE] space-x-10 pt-14 text-base pb-4">
+          <div className="flex w-full border-b-1 border-[#DEDEDE] space-x-16 pt-14 text-base ">
             <Button
               child="Basic"
-              className={
-                " text-[#314B87] font-semibold underline cursor-pointer px-4 py-1 h-10 "
-              }
+              className={`${
+                showBasic
+                  ? " text-[#314B87] font-semibold  px-4 py-1 h-10 ml-11 border-b-[4px] w-[200px] border-black"
+                  : " text-[#333333] font-semibold px-4 py-1 mx-8 w-[200px]"
+              }`}
               active={showBasic}
               onClick={() => toggleButtons("Basic")}
             />
             <Button
               child="Verification"
-              className={" text-[#333333] font-semibold px-4 py-1 mx-8"}
+              className={`${
+                showVerification
+                  ? " text-[#314B87] font-semibold  px-4 py-1 h-10 ml-11 border-b-[4px] w-[200px] border-black"
+                  : " text-[#333333] font-semibold px-4 py-1 mx-8 w-[200px]"
+              }`}
               active={showVerification}
               onClick={() => toggleButtons("Verification")}
             />
             <Button
               child="Advanced"
-              className={" text-[#333333] font-semibold px-4 py-1"}
+              className={`${
+                showAdvanced
+                  ? " text-[#314B87] font-semibold  px-4 py-1 h-10 ml-11 border-b-[4px] w-[200px] border-black"
+                  : " text-[#333333] font-semibold px-4 py-1 mx-8 w-[200px]"
+              }`}
               active={showAdvanced}
               onClick={() => toggleButtons("Advanced")}
             />
           </div>
-          {showBasic && (
-            <div className="pt-14 space-y-8">
+          <div>
+            {showBasic && (
               <div>
-                <p className="text-sm text-[#6D6D6D] font-semibold">
-                  Description
-                </p>
-                <p className="text-lg text-[#011E3E]">
-                  Lorem ipsum dolor sit amet consectetur. Egestas etiam lectus
-                  sapien eget. Eget massa consectetur senectus mi aliquet. In
-                  nulla mattis sollicitudin placerat. Rhoncus bibendum non
-                  suspendisse praesent diam a maecenas et. Eget neque platea ut
-                  enim. Faucibus magnis ut aliquet quis. Tellus commodo felis
-                  duis pretium et mauris et aliquet.
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-[#6D6D6D] font-semibold">
-                  Email Address
-                </p>
-                <p className="text-lg text-[#011E3E]">
-                  jekodunmiebrudayakinfemi@gmail.com
-                </p>
-              </div>
-              <div>
-                <p className="text-sm text-[#6D6D6D] font-semibold">
-                  Phone Number
-                </p>
-                <p className="text-lg text-[#011E3E]">+1 293 0914 910</p>
-              </div>
-              <div>
-                <p className="text-sm text-[#6D6D6D] font-semibold">
-                  Date of Birth
-                </p>
-                <p className="text-lg text-[#011E3E]">17th August 1991</p>
-              </div>
-            </div>
-          )}
-
-          {showVerification && (
-            <div className="mt-10">
-              <div className="">
-                <p>Verification Progress</p>
-                <div className="flex mt-6">
-                  <div className="w-full h-5 bg-gray-300 rounded-full relative">
-                    <div
-                      className="h-full bg-indigo-500 rounded-full"
-                      style={{ width: "80%" }}
-                    ></div>
+                <div className="pt-14 space-y-8 ">
+                  <div>
+                    <p className="text-sm text-[#6D6D6D] font-semibold">
+                      Description
+                    </p>
+                    <p className="text-lg text-[#011E3E]">
+                      Lorem ipsum dolor sit amet consectetur. Egestas etiam
+                      lectus sapien eget. Eget massa consectetur senectus mi
+                      aliquet. In nulla mattis sollicitudin placerat. Rhoncus
+                      bibendum non suspendisse praesent diam a maecenas et. Eget
+                      neque platea ut enim. Faucibus magnis ut aliquet quis.
+                      Tellus commodo felis duis pretium et mauris et aliquet.
+                    </p>
                   </div>
-                  <p className="ml-6 font-bold">80%</p>
+                  <div>
+                    <p className="text-sm text-[#6D6D6D] font-semibold">
+                      Email Address
+                    </p>
+                    <p className="text-lg text-[#011E3E]">
+                      jekodunmiebrudayakinfemi@gmail.com
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#6D6D6D] font-semibold">
+                      Phone Number
+                    </p>
+                    <p className="text-lg text-[#011E3E]">+1 293 0914 910</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-[#6D6D6D] font-semibold">
+                      Date of Birth
+                    </p>
+                    <p className="text-lg text-[#011E3E]">17th August 1991</p>
+                  </div>
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-11 sm:gap-x-11 row-gap-20 mt-12">
-                <div className="">
-                  <p className="text-lg text-[#000000] mb-2 font-medium">
-                    Basic Verification
-                  </p>
-                  <Button
-                    child="Complete your Profile Verification"
-                    className="w-9/12 font-bold bg-[#FDC49B] text-[#642B02] text-xs
-                     p-2 rounded-lg"
-                    onClick={() => {}}
-                  />
-                </div>
-                <div>
-                  <p className="text-lg text-[#000000]  mb-2 font-medium">
-                    Verified for Transactions
-                  </p>
-                  <Button
-                    child="Verification Complete"
-                    className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
-                    onClick={() => {}}
-                  />
-                </div>
-                <div>
-                  <p className="text-lg text-[#000000]  mb-2 font-medium">
-                    Email Verification
-                  </p>
-                  <Button
-                    child="Verification Complete"
-                    className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
-                    onClick={() => {}}
-                  />
-                </div>
-                <div className="mt-8">
-                  <p className="text-lg text-[#000000]  mb-2 font-medium">
-                    Office Address Verification
-                  </p>
-                  <Button
-                    child="Complete your Profile Verification"
-                    className="w-9/12 font-bold bg-[#FDC49B] text-[#642B02] text-xs p-2 rounded-lg"
-                    onClick={() => {}}
-                  />
-                </div>
-                <div className="mt-8">
-                  <p className="text-lg text-[#000000]  mb-2 font-medium">
-                    GOFER Reference (Guarantor)
-                  </p>
-                  <Button
-                    child="Verification Complete"
-                    className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
-                    onClick={() => {}}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
+            )}
 
-          {showAdvanced && (
-            <div className="mt-8">
-              <p className="text-bold">Coming Soon................</p>
-            </div>
-          )}
+            {showVerification && (
+              <div className="">
+                <div className="pt-14 space-y-8">
+                  <div className="">
+                    <p>Verification Progress</p>
+                    <div className="flex mt-6">
+                      <div className="w-full h-5 bg-gray-300 rounded-full relative">
+                        <div
+                          className="h-full bg-indigo-500 rounded-full"
+                          style={{ width: "80%" }}
+                        ></div>
+                      </div>
+                      <p className="ml-6 font-bold">80%</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-11 sm:gap-x-11 row-gap-20 mt-12">
+                    <div className="">
+                      <p className="text-lg text-[#000000] mb-2 font-medium">
+                        Basic Verification
+                      </p>
+                      <Button
+                        child="Complete your Profile Verification"
+                        className="w-9/12 font-bold bg-[#FDC49B] text-[#642B02] text-xs
+                     p-2 rounded-lg"
+                        onClick={() => {}}
+                      />
+                    </div>
+                    <div>
+                      <p className="text-lg text-[#000000]  mb-2 font-medium">
+                        Verified for Transactions
+                      </p>
+                      <Button
+                        child="Verification Complete"
+                        className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
+                        onClick={() => {}}
+                      />
+                    </div>
+                    <div>
+                      <p className="text-lg text-[#000000]  mb-2 font-medium">
+                        Email Verification
+                      </p>
+                      <Button
+                        child="Verification Complete"
+                        className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
+                        onClick={() => {}}
+                      />
+                    </div>
+                    <div className="mt-8">
+                      <p className="text-lg text-[#000000]  mb-2 font-medium">
+                        Office Address Verification
+                      </p>
+                      <Button
+                        child="Complete your Profile Verification"
+                        className="w-9/12 font-bold bg-[#FDC49B] text-[#642B02] text-xs p-2 rounded-lg"
+                        onClick={() => {}}
+                      />
+                    </div>
+                    <div className="mt-8">
+                      <p className="text-lg text-[#000000]  mb-2 font-medium">
+                        GOFER Reference (Guarantor)
+                      </p>
+                      <Button
+                        child="Verification Complete"
+                        className="w-6/12 font-bold bg-[#ADF0D1] text-[#115A38] text-xs p-2 rounded-lg"
+                        onClick={() => {}}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {showAdvanced && (
+              <div>
+                {" "}
+                <div>
+                  <div className="pt-14 space-y-8">
+                    <p className="text-bold">Coming Soon................</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

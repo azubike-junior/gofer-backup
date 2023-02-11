@@ -1,22 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
-@import url('https://fonts.cdnfonts.com/css/recoleta');
+@import url("https://fonts.cdnfonts.com/css/recoleta");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 .hero-banner {
   /* background-image: url('/hero.svg'); */
   height: 100;
   background-position: center;
-  background: linear-gradient(rgba(36, 55, 99, 0.8), rgba(36, 55, 99, 0.8)),url('/gofer-img.png');
-  background-size:contain;
-  
+  background: linear-gradient(rgba(36, 55, 99, 0.8), rgba(36, 55, 99, 0.8)),
+    url("/gofer-img.png");
+  background-size: contain;
 }
 
-.banner{
+.banner {
   background-position: center;
-  background: linear-gradient(90deg, #3D7EAA 0%, #FFE47A 100%);;
+  background: linear-gradient(90deg, #3d7eaa 0%, rgba(1, 30, 62, 0.56) 100%);
 }
