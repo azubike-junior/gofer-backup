@@ -24,7 +24,7 @@ export default function profile() {
     }
   };
   return (
-    <div className="bg-white h-full font-inter">
+    <div className="bg-white h-full font-inter mt-8">
       <div className="bg-[#243763] h-24"></div>
       <div className="banner h-[250px] z-5"></div>
       <div className=" flex z-20 w-full justify-center items-center px-40 pb-40">
