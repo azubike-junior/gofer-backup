@@ -1,19 +1,21 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 interface BtnProp {
-  child: any
-  type?: 'button' | 'submit' | 'reset'
-  className?: string
-  onClick?: any
-  icon?: any
+  child: any;
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  onClick?: any;
+  icon?: any;
+  active?: boolean;
 }
 
 export default function Button({
   child,
-  type = 'button',
+  type = "button",
   onClick,
   className,
   icon,
+  active,
 }: BtnProp) {
   return (
     <button className={className} onClick={onClick}>
@@ -26,9 +28,9 @@ export default function Button({
             alt="notify"
             className="pr-3"
           />
-        )}{' '}
+        )}{" "}
         {child}
       </div>
     </button>
-  )
+  );
 }

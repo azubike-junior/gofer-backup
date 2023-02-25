@@ -3,7 +3,6 @@ import axios from 'axios';
 import { deleteCookie } from 'cookies-next';
 import toast from 'react-hot-toast';
 import { ILogin } from '../../types';
-import { http } from '../axios/http';
 
 export const loginUser = createAsyncThunk("/users/sign-in", async ({router, ...rest}: ILogin, {rejectWithValue}) => {
   try {
