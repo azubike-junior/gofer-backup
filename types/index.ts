@@ -1,41 +1,40 @@
 export type loginProps = {
-    phone_number: string,
-    password: string
-}
+  phone_number: string;
+  password: string;
+};
 
 export type registrationProps = {
-    full_name: string,
-    phonenumber: number,
-    business_name: string,
-    type_of_business: string,
-    email: string,
-    country_of_residence: string,
-    password: string,
-}
+  full_name: string;
+  phonenumber: number;
+  business_name: string;
+  type_of_business: string;
+  email: string;
+  country_of_residence: string;
+  password: string;
+};
 
 export type bankingProps = {
-    bank_name: string,
-    account_number: number,
-
-}
+  bank_name: string;
+  account_number: number;
+};
 
 export type directorDetailsProps = {
-    directors_phonenumber: number,
-    date: number,
-    nationality: string,
-    identification: string,
-    id_no: number,
-    address: string,
-}
+  directors_phonenumber: number;
+  date: number;
+  nationality: string;
+  identification: string;
+  id_no: number;
+  address: string;
+};
 
 export type forgot_password = {
-    email: string
-}
+  email: string;
+};
 
 export type set_password = {
-    password: string,
-    enter_password: string,
-}
+  password: string;
+  enter_password: string;
+};
 
 export interface IHookInputProps {
   label?: string;
@@ -68,23 +67,27 @@ export interface IHookInputProps {
   setState?: any;
   optional?: boolean;
   selectBorder?: string;
-  selectLabel?: string
-  labelClass?: string
-  borderClass?: string
-  inputClass?: string
+  selectLabel?: string;
+  labelClass?: string;
+  borderClass?: string;
+  inputClass?: string;
 }
 
 export interface ICreateAccount {
-  first_name: string
-  last_name: string
-  client?: string
-  phone_number: string
-  password: string
+  first_name: string;
+  last_name: string;
+  client?: string;
+  phone_number: string;
+  password: string;
 }
 
 export interface ILogin {
-  phone_number: string
-  password: string,
-  router: any
+  phone_number: string;
+  password: string;
+  router: any;
 }
 
+export interface TaskBtnProps {
+  image: string;
+  description: string;
+}
