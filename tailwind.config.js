@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         recoletta: ["Recoleta", "sans-serif"],
+        advent: ['Advent Pro', "sans-serif"],
       },
       width: {
         1: "1px",

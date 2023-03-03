@@ -43,16 +43,24 @@ export function InputField({
           'flex justify-between items-center w-full bg-white py-2 border-2 border-inputBorder rounded-lg mt-1',
         )}
       >
-        <input
-          {...register(name, { required })}
-          placeholder={placeholder}
-          className="rounded-lg outline-none flex-1 px-3 py-2"
-          name={name}
-          type={type}
-          disabled={disabled}
-          value={value}
-          {...rest}
-        />
+        {textArea ? (
+          <textarea
+            name=""
+            className="rounded-lg outline-none flex-1 px-3 py-2"
+            rows={9}
+          />
+        ) : (
+          <input
+            // {...register(name, { required })}
+            placeholder={placeholder}
+            className="rounded-lg outline-none flex-1 px-3 py-2"
+            name={name}
+            type={type}
+            disabled={disabled}
+            value={value}
+            {...rest}
+          />
+        )}
 
         {show && (
           <p onClick={onClick} className="cursor-pointer text-xs px-1">

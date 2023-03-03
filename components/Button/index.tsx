@@ -6,7 +6,9 @@ interface BtnProp {
   className?: string;
   onClick?: any;
   icon?: any;
+  icon2?: any;
   active?: boolean;
+  disabled?: boolean
 }
 
 export default function Button({
@@ -15,10 +17,12 @@ export default function Button({
   onClick,
   className,
   icon,
+  icon2,
+  disabled,
   active,
 }: BtnProp) {
   return (
-    <button className={className} onClick={onClick}>
+    <button disabled={disabled} className={className} onClick={onClick}>
       <div className="flex justify-center items-center">
         {icon && (
           <Image
@@ -30,6 +34,15 @@ export default function Button({
           />
         )}{" "}
         {child}
+        {icon2 && (
+          <Image
+            src={icon2}
+            width={30}
+            height={30}
+            alt="notify"
+            className="pl-3"
+          />
+        )}
       </div>
     </button>
   );
