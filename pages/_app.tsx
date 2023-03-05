@@ -1,8 +1,4 @@
-import {
-  ChakraProvider,
-  extendTheme,
-  StyleFunctionProps,
-} from '@chakra-ui/react'
+import { extendTheme, StyleFunctionProps } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 import React from 'react'
 import 'react-phone-input-2/lib/style.css'
@@ -52,17 +48,17 @@ const theme = extendTheme({
 })
 
 export default function App({ Component, pageProps, ...appProps }: AppProps) {
-  const isLayoutDashboard = ['/overview'].includes(appProps.router.pathname)
+  const isLayoutDashboard = ['/post-errand', '/errandMarket/errands'].includes(
+    appProps.router.pathname,
+  )
 
   const LayoutComponent = isLayoutDashboard ? Layout : React.Fragment
 
   return (
     <Provider store={store}>
-      <ChakraProvider theme={theme}>
-        <LayoutComponent>
-          <Component {...pageProps} />
-        </LayoutComponent>
-      </ChakraProvider>
+      <LayoutComponent>
+        <Component {...pageProps} />
+      </LayoutComponent>
     </Provider>
   )
 }

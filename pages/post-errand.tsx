@@ -11,7 +11,7 @@ import StepProgressBar from '../components/ProgressBar'
 
 export default function postErrand() {
   const router = useRouter()
-  const [activeStep, setActiveStep] = useState<number>(2)
+  const [activeStep, setActiveStep] = useState<number>(1)
   const [selectedItem, setSelectedItem] = useState<string>('')
   const [stepName, setStepName] = useState<string>('')
   const steps = ['Category', 'Details', 'Location', 'Finance', 'Reviews']
@@ -39,19 +39,7 @@ export default function postErrand() {
   }
 
   return (
-    <div className="bg-white h-full font-inter ">
-      <div className="flex px-20 border-b-4 border-b-gray-300 mb-10">
-        <div className="flex items-center w-full mt-8 mb-4">
-          <p className="flex-1 font-bold leading-43 text-3xl text-black">
-            Gofer
-          </p>
-          <Button
-            child="Get Started"
-            className="bg-white text-blue rounded-lg border-[#A5B6DE] py-2 px-3 w-40 border-1 text-xs text-blue-500 ml-auto"
-            onClick={() => {}}
-          />
-        </div>
-      </div>
+    <div className="bg-white h-full font-inter pt-10">
       <div className="w-full px-36 pb-14">
         <div className="flex text-2xl font-bold space-x-3 border-b pb-2">
           <span>Create an Errand </span>
@@ -91,9 +79,6 @@ export default function postErrand() {
           />
         </div>
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   )
 }

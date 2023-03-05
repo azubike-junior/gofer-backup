@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/post-errand": [
+    "/errandMarket/errands": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/post-errand.js"
+      "static/chunks/pages/errandMarket/errands.js"
     ]
   },
   "ampFirstPages": []

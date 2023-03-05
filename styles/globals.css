@@ -22,3 +22,8 @@
 .flexGrow {
   flex-grow: 1;
 }
+
+.container {
+  columns:4;
+  column-gap: 10px;
+}
