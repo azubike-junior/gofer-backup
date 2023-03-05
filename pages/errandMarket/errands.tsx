@@ -1,11 +1,22 @@
+import { useState } from 'react'
 import Button from '../../components/Button'
 import ErrandCard from '../../components/Errands/ErrandCard'
 import PlaceBid from '../../components/Errands/PlaceBid'
 
 export default function Errands() {
-  console.log('>>>>>djdjd')
+  const [showBid, setShowBid] = useState<boolean>(false)
+  const [showPlaceBid, setShowPlaceBid] = useState<boolean>(false)
+
+  const toggleBidModal = () => {
+    setShowBid(!showBid)
+  }
+
+  const togglePlaceBid = () => {
+    setShowPlaceBid(!showPlaceBid)
+  }
+
   return (
-    <div>
+    <div className="">
       <div className="bg-[#F0F3FA] w-full h-72 ">
         <div className="flex justify-center">
           <div className="bg-white px-4 py-2 w-[65%] h-14 flex mt-16 rounded-lg">
@@ -33,37 +44,44 @@ export default function Errands() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-4 mb-20">
+      <div
+        className="flex justify-center items-center mt-4 mb-20"
+        onClick={() => {
+          showBid && setShowBid(false)
+        }}
+      >
         <div className="">
           <div className="container">
-            <ErrandCard ins img />
-            <ErrandCard />
-            <ErrandCard ins />
-            <ErrandCard ins />
+            <ErrandCard ins img toggleBidModal={toggleBidModal} />
+            <ErrandCard toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
 
-            <ErrandCard ins />
-            <ErrandCard ins />
-            <ErrandCard ins img />
-            <ErrandCard ins />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins img toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
 
-            <ErrandCard ins />
-            <ErrandCard />
-            <ErrandCard ins img />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard toggleBidModal={toggleBidModal} />
+            <ErrandCard ins img toggleBidModal={toggleBidModal} />
 
-            <ErrandCard ins />
-            <ErrandCard ins />
-            <ErrandCard ins img />
-            <ErrandCard ins />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins img toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
 
-            <ErrandCard ins />
-            <ErrandCard ins />
-            <ErrandCard ins img />
-            <ErrandCard ins />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
+            <ErrandCard ins img toggleBidModal={toggleBidModal} />
+            <ErrandCard ins toggleBidModal={toggleBidModal} />
           </div>
         </div>
       </div>
 
-      <PlaceBid />
+      {showBid && (
+        <PlaceBid showPlaceBid={showPlaceBid} togglePlaceBid={togglePlaceBid} showBid={showBid} toggleBidModal={toggleBidModal} />
+      )}
     </div>
   )
 }

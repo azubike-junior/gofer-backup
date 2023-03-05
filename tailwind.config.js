@@ -36,7 +36,8 @@ module.exports = {
         4: "2px",
       },
       colors: {
-        customBlue: "#cccccc"
+        customBlue: "#cccccc",
+        lightBlue: "rgba(63, 96, 172, 0.6)"
       },
       boxShadow: {
         xmd: "0px 4px 40px 0px rgba(0, 0, 0, 0.15)",
@@ -54,6 +55,7 @@ module.exports = {
       backgroundColor: {
         lightPink: "rgba(255, 2, 2, 0.13)",
         profileHeroBg: "linear-gradient(90deg, #3D7EAA 0%, #FFE47A 100%)",
+      
       },
       inset: {
         "135px": "-135px",

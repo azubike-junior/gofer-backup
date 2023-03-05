@@ -1,11 +1,12 @@
 type CardProps = {
   img?: boolean
   ins?: boolean
+  toggleBidModal?: any
 }
 
-export default function ErrandCard({ ins, img }: CardProps) {
+export default function ErrandCard({ ins, img, toggleBidModal }: CardProps) {
   return (
-    <div className={`bg-white w-[320px] border-1 rounded-lg mt-14 ml-6 break-inside-avoid float-left shadow ${img ? "h-[410px]": "h-[200px]"} cursor-pointer `}>
+    <div className={`bg-white w-[320px] border-1 z-0 rounded-lg mt-14 ml-6 break-inside-avoid float-left shadow ${img ? "h-[410px]": "h-[200px]"} cursor-pointer `} onClick={toggleBidModal}>
       {img && <img src="/errand-img.svg" className="w-[350px]" alt="" />}
       <div className="py-2 font-semibold pl-3">
         <p className="text-base">I need someone to help with laundry</p>

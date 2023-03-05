@@ -1,94 +1,34 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+    "static/chunks/polyfills.js"
   ],
-  "devFiles": [],
-  "ampDevFiles": [],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
   "lowPriorityFiles": [
-    "static/G1vh_8EDUYqqhY2BlEuOz/_buildManifest.js",
-    "static/G1vh_8EDUYqqhY2BlEuOz/_ssgManifest.js"
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/664-8e882b10ee2ae152.js",
-      "static/chunks/pages/index-6838ec46228e4fec.js"
-    ],
     "/_app": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/css/11e8d1a7445905a9.css",
-      "static/chunks/pages/_app-babbc1264557b415.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
     ],
     "/_error": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/pages/_error-8353112a01355ec2.js"
-    ],
-    "/account-recovery": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/555-387d29e72eef6424.js",
-      "static/chunks/pages/account-recovery-f75e122472f22e06.js"
-    ],
-    "/create-account": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/281-07903c2a2fa0cd17.js",
-      "static/chunks/555-387d29e72eef6424.js",
-      "static/chunks/664-8e882b10ee2ae152.js",
-      "static/chunks/pages/create-account-ef5afcbddc8d28e3.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
     ],
     "/errandMarket/errands": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/pages/errandMarket/errands-eab84244fcf99f6a.js"
-    ],
-    "/login": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/281-07903c2a2fa0cd17.js",
-      "static/chunks/555-387d29e72eef6424.js",
-      "static/chunks/664-8e882b10ee2ae152.js",
-      "static/chunks/pages/login-a4d842abd6409bc9.js"
-    ],
-    "/password-recovery": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/281-07903c2a2fa0cd17.js",
-      "static/chunks/555-387d29e72eef6424.js",
-      "static/chunks/pages/password-recovery-f78644dd70480762.js"
-    ],
-    "/post-errand": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/pages/post-errand-5d379cffce793aff.js"
-    ],
-    "/profile": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/pages/profile-554c7ebb94219211.js"
-    ],
-    "/verify-phone": [
-      "static/chunks/webpack-38cee4c0e358b1a3.js",
-      "static/chunks/framework-3b5a00d5d7e8d93b.js",
-      "static/chunks/main-8e5ccd8603d7c33b.js",
-      "static/chunks/59235bb1-1c166ba2755bff84.js",
-      "static/chunks/281-07903c2a2fa0cd17.js",
-      "static/chunks/418-723db24623e8220f.js",
-      "static/chunks/pages/verify-phone-2ec05d3a06ddaf42.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/errandMarket/errands.js"
     ]
   },
   "ampFirstPages": []
