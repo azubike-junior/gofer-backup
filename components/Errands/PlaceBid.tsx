@@ -24,15 +24,39 @@ export default function PlaceBid() {
       </div>
 
       <div className="pt-6 flex gap-20 ">
-        <div className='space-y-4 text-sm text-[#888888] font-bold'>
+        <div className="space-y-5 text-sm text-[#888888] font-bold">
           <p>status</p>
           <p>Duration</p>
           <p>Location</p>
           <p>Special Requirements</p>
         </div>
-        <div className='gap-10'>
-          <Button child="open" className=''/>
-          <p>ddjdjdjdjdj</p>
+        <div className="space-y-[17px] text-sm">
+          <Button
+            child="open"
+            className="bg-[#CBD5EC] px-4 rounded-sm text-sm text-[#243763] h-6"
+          />
+          <div className="flex">
+            <img src="/cal-icon.svg" alt="" />{' '}
+            <span className="pl-2">Jan 14, 2023 - Feb 14, 2023</span>
+          </div>
+          <p>Sangotedo, Lagos</p>
+          <div className='flex space-x-3'>
+            <Button
+              icon="/insurance.svg"
+              child="Insurance"
+              className="bg-[#F0F3FA] h-6 px-2 rounded-lg text-[#3F60AC] border-[#3F60AC] border-[1px] text-xs"
+            />
+            <Button
+              icon="/bookmark.svg"
+              child="Insurance"
+              className="bg-[#E6CDFE] h-6 px-2 rounded-lg text-[#6604C8] border-[#6604C8] border-[1px] text-xs"
+            />
+            <Button
+              icon="/insurance.svg"
+              child="Insurance"
+              className="bg-[#D8F8E9] h-6 px-2 rounded-lg text-[#198553] border-[#198553] border-[1px] text-xs"
+            />
+          </div>
         </div>
       </div>
     </div>

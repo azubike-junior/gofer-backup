@@ -18,7 +18,7 @@ export const validateToken = () => {
   let accessTokenExpireTime: any;
 
   try {
-    accessTokenExpireTime = jwtDecode(access_token)?.exp; //remember to get exp date of token
+    // accessTokenExpireTime = jwtDecode(access_token)?.exp; //remember to get exp date of token
   } catch (e) {
     //if error logout user
   }
@@ -28,7 +28,7 @@ export const validateToken = () => {
     let refreshTokenExpireTime: any
    
     try {
-      refreshTokenExpireTime = jwtDecode(refresh_token).exp;
+      // refreshTokenExpireTime = jwtDecode(refresh_token).exp;
     } catch (error) {
       //logout user
     }

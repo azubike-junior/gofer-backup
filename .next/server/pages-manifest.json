@@ -1,6 +1,16 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/account-recovery": "pages/account-recovery.html",
+  "/api/hello": "pages/api/hello.js",
+  "/create-account": "pages/create-account.html",
+  "/errandMarket/errands": "pages/errandMarket/errands.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/password-recovery": "pages/password-recovery.html",
+  "/post-errand": "pages/post-errand.html",
+  "/profile": "pages/profile.html",
+  "/verify-phone": "pages/verify-phone.html",
   "/_document": "pages/_document.js",
-  "/errandMarket/errands": "pages/errandMarket/errands.js"
+  "/404": "pages/404.html"
 }
