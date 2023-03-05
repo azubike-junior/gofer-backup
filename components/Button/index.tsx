@@ -27,8 +27,8 @@ export default function Button({
         {icon && (
           <Image
             src={icon}
-            width={30}
-            height={30}
+            width={26}
+            height={26}
             alt="notify"
             className="pr-3"
           />
