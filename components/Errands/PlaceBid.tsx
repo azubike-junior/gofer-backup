@@ -23,12 +23,18 @@ export default function PlaceBid() {
         <p className="text-[#666666] font-semibold text-sm">George Eno</p>
       </div>
 
-      {/* <div className='pt-6'>
-        <tr>
-          <td>Status</td>
-          <td>hellll</td>
-        </tr>
-      </div> */}
+      <div className="pt-6 flex gap-20 ">
+        <div className='space-y-4 text-sm text-[#888888] font-bold'>
+          <p>status</p>
+          <p>Duration</p>
+          <p>Location</p>
+          <p>Special Requirements</p>
+        </div>
+        <div className='gap-10'>
+          <Button child="open" className=''/>
+          <p>ddjdjdjdjdj</p>
+        </div>
+      </div>
     </div>
   )
 }
