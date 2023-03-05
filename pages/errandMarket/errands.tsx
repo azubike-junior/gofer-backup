@@ -3,7 +3,7 @@ import ErrandCard from '../../components/Errands/ErrandCard'
 import PlaceBid from '../../components/Errands/PlaceBid'
 
 export default function Errands() {
-  console.log(">>>>>djdjd")
+  console.log('>>>>>djdjd')
   return (
     <div>
       <div className="bg-[#F0F3FA] w-full h-72 ">
@@ -63,8 +63,7 @@ export default function Errands() {
         </div>
       </div>
 
-
-      <PlaceBid/>
+      <PlaceBid />
     </div>
   )
 }
