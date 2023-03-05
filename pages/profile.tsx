@@ -89,8 +89,7 @@ export default function profile() {
               <div>
                 <Button
                   onClick={() => {
-                    localStorage.clear();
-                    router.push("/");
+                    router.push("/post-errand");
                   }}
                   child="Edit Profile"
                   className="bg-[#F0F3FA] text-black rounded-lg border-[#A5B6DE] py-2.5 w-40 border-1 text-xs mr-0"

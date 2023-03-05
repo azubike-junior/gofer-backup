@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/errandMarket/errands.js"
+    ],
+    "/post-errand": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/post-errand.js"
     ]
   },
   "ampFirstPages": []

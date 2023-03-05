@@ -23,7 +23,7 @@ export default function Register() {
     (state: RootState) => state.createAccount,
   )
 
-  console.log('>>>>>>data,', error)
+  console.log('>>>>>>data,', phone.substring(1))
 
   const {
     register,
@@ -37,10 +37,10 @@ export default function Register() {
     setPhone(phone)
   }, [])
 
-  const createAccountHandler = (data: any) => {
+  const createAccountHandler = (data: ICreateAccount) => {
     const newData = {
       client: 'web',
-      phone_number: `+234${data?.phone_number.substring(1)}`,
+      phone_number: `+234${phone.substring(1)}`,
       first_name: data.first_name,
       last_name: data.last_name,
       password: data.password,

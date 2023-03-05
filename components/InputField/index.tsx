@@ -51,7 +51,7 @@ export function InputField({
           />
         ) : (
           <input
-            // {...register(name, { required })}
+            {...register(name, { required })}
             placeholder={placeholder}
             className="rounded-lg outline-none flex-1 px-3 py-2"
             name={name}

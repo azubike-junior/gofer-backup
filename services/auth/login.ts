@@ -8,6 +8,9 @@ export const loginUser = createAsyncThunk("/users/sign-in", async ({router, ...r
   try {
     console.log(">>>>>>>rest", rest)
     const rs = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/user/sign-in`, rest)
+
+    console.log(">>>>>>>res", rs)
+
   
     if (rs.status === 200) {
       localStorage?.setItem("accessToken", rs.data.data.token)

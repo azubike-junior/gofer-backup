@@ -71,9 +71,11 @@ export default function postErrand() {
             icon2="/arrowproceed.svg"
             className={`bg-[#243763]  border text-lg text-white p-2 rounded px-4 py-3 ${
               !selectedItem ? 'bg-[#F0F3FA]' : 'border-blue-700 '
-            }`}
+              }`}
+            
             onClick={() => {
-              setActiveStep(activeStep + 1)
+             activeStep < 5 ? setActiveStep(activeStep + 1) :  router.push('/errandMarket/errands')
+
             }}
             disabled={!selectedItem}
           />
